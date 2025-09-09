@@ -1,0 +1,8 @@
+aws ec2 run-instances \
+  --image-id ami-00ca32bbc84273381 \
+  --instance-type t2.micro \
+  --key-name linux_keypair \
+  --security-group-ids sg-0134b1156709df621 \
+  --subnet-id subnet-095492c0294bfc8ec \
+  --count 1 \
+  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyAmazonLinux}]'
